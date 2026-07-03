@@ -1,5 +1,5 @@
 import { storyNodes } from '../data/stories.js';
-import { mainStory } from '../data/story_quests.js';
+import { mainStory } from '../data/stories_quest.js';
 import { randomEvents } from '../data/events.js';
 import { UI } from './ui.js';
 

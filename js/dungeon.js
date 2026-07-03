@@ -1,4 +1,4 @@
-import { dungeonData } from '../data/dungeons.js';
+import { dungeonData } from '../data/dungeon.js';
 
 export class DungeonEngine {
     constructor(dungeonId, onEncounter, onLoot, onBoss) {
