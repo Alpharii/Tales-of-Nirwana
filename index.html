@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tales of Nirwana</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu-screen" class="screen">
+            <h1>Tales of Nirwana</h1>
+            <button id="btn-new-game">New Game</button>
+            <button id="btn-continue">Continue</button>
+            <button id="btn-delete-save">Delete Save</button>
+            <button id="btn-settings">Settings</button>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+    <h1 style="color: red; font-size: 2em;">YOU DIED</h1>
+    <p>Semua jerih payahmu lenyap. Save data telah dihapus.</p>
+    <div id="final-stats">
+        <h3>Final Statistics</h3>
+        <p>Tikus Dibasmi: <span id="stat-rats">0</span></p>
+        <p>Total Gold Didapat: <span id="stat-gold">0</span></p>
+    </div>
+    <button onclick="location.reload()">Kembali ke Realita (Main Menu)</button>
+</div>
+
+        <div id="game-screen" class="screen hidden">
+            <div id="status-bar">
+                <span>Day: <span id="ui-day">1</span></span>
+                <span>HP: <span id="ui-hp">100</span>/<span id="ui-maxhp">100</span></span>
+                <span>Lv: <span id="ui-level">1</span> (EXP: <span id="ui-exp">0</span>)</span>
+                <span>Gold: <span id="ui-gold">0</span></span>
+            </div>
+            
+            <div id="story-content">
+                <p id="story-text">Loading...</p>
+                <div id="story-choices"></div>
+            </div>
+
+            <div class="nav-buttons">
+                <button id="btn-open-inv">Inventory</button>
+                <button id="btn-save">Save Game</button>
+                <button id="btn-to-menu">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="inv-screen" class="screen hidden">
+            <h2>Inventory</h2>
+            <div id="equip-slots">
+                <p>Weapon: <span id="eq-weapon">None</span></p>
+                <p>Armor: <span id="eq-armor">None</span></p>
+            </div>
+            <ul id="inv-list"></ul>
+            <button id="btn-close-inv">Close</button>
+        </div>
+
+        <div id="shop-screen" class="screen hidden">
+            <h2>Merchant</h2>
+            <div id="shop-list"></div>
+            <button id="btn-close-shop">Leave Shop</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
